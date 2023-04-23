@@ -12,6 +12,28 @@ namespace _30.Class_method
         public string LastName;
 
         private DateTime dateOfBirth;
+        
+        private string contactNumber;
+
+        public string ContactNumber
+        {
+            get {return contactNumber; }
+            set 
+            {
+                if (value.Length < 9)
+                {
+                    Console.WriteLine("Invalid contact Number");
+                }
+                else
+                {
+                    contactNumber = value;
+                }
+                
+            }
+    
+        }
+        
+        // public string ContactNumber { get; set; } // jest to równoważne z tym co jest u góry, ale nie ma tutaj żadnej logiki związanej z ustawianiem wartości
 
         public Person(string firstName, string lastName) // pusty konstruktor(incjacja wartości danego oobiektu) jest tworzony domyślnie, można tworzyć przypisane by sprawdzic wartości w nim przypisane
         {

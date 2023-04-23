@@ -8,13 +8,16 @@ namespace Program
 
         static void Main(string[] args)
         {
-            Person bill = new Person("Johny","Wick"); // konstruktor
+            Person bill = new Person("Bill","Wick"); // konstruktor
 
             bill.SetDateOfBirth(new DateTime(1990, 1, 1));
 
             Console.WriteLine($"{bill.FirstName} {bill.GetDateOfBirth()}");
 
             bill.SayHi(); // wywolania funkcji SayHi
+            bill.ContactNumber = "999888777"; // jest to inne podejscie bill.SetDateOfBirth
+            Console.WriteLine(bill.ContactNumber);
+
 
             Person john = new Person(new DateTime(1987, 1, 2), "Billy", "Wicky");
         }
