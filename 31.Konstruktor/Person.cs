@@ -16,15 +16,15 @@ namespace _30.Class_method
         public DateTime DateOfBirth
         {
             get { return dateOfBirth; }
-            set
+            set 
             {
-                if (DateOfBirth > DateTime.Now)
+                if (value > DateTime.Now)
                 {
                     Console.WriteLine("Invalid date of  birth");
                 }
                 else
                 {
-                    dateOfBirth = DateOfBirth;
+                    dateOfBirth = value;
                 }
             }
         }
