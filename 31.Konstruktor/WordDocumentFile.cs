@@ -8,7 +8,10 @@ namespace _31.Konstruktor
 {
     internal class WordDocumentFile : File // dziedziczenie
     {
-
+        public override void Compres()
+        {
+            Console.WriteLine($"Compressing WordFile..");
+        }
 
         public void Print()
         {

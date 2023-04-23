@@ -2,7 +2,7 @@
 {
     public class Class1
     {
-        internal string PropInternal { get; set; }
+        internal string InternalProp { get; set; }
 
         public string PropPublic { get; set; }
 

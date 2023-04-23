@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _31.Konstruktor
 {
-    internal class File
+    abstract class File
     {
         public string FileName { get; set; }
 
@@ -17,5 +17,7 @@ namespace _31.Konstruktor
         protected string ProtectedProp { get; set; }
 
         private string PrivateProp { get; set; }
+
+        public abstract void Compres();
     }
 }

@@ -8,7 +8,10 @@ namespace _31.Konstruktor
 {
     internal class PowerPointFile : File // dziedziczenie
     {
-
+        public override void Compres()
+        {
+            Console.WriteLine($"Compressing PowerPoint file..");
+        }
         public void Present()
         {
             Console.WriteLine($"{FileName} presenting..");

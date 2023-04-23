@@ -8,6 +8,10 @@ namespace _31.Konstruktor
 {
     internal class ExcelFile : File // dziedziczenie
     {
+        public override void Compres()
+        {
+            Console.WriteLine($"Compressing Excel File..");
+        }
 
 
         public void GenerateReport()
