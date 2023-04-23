@@ -12,6 +12,7 @@ namespace _31.Konstruktor
 
         public void GenerateReport()
         {
+            string prop = ProtectedProp;
             Console.WriteLine($"{FileName} report..");
         }
     }
