@@ -12,7 +12,23 @@ namespace _30.Class_method
         public string LastName;
 
         private DateTime dateOfBirth;
-        
+
+        public DateTime DateOfBirth
+        {
+            get { return dateOfBirth; }
+            set
+            {
+                if (DateOfBirth > DateTime.Now)
+                {
+                    Console.WriteLine("Invalid date of  birth");
+                }
+                else
+                {
+                    dateOfBirth = DateOfBirth;
+                }
+            }
+        }
+
         private string contactNumber;
 
         public string ContactNumber
@@ -41,12 +57,13 @@ namespace _30.Class_method
             FirstName = firstName;
             LastName = lastName;
         }
-
+        /*
         public Person(DateTime dateOfBirth, string firstName, string lastName) : this(firstName,lastName) // pusty konstruktor(incjacja wartości danego oobiektu) jest tworzony domyślnie, można tworzyć przypisane by sprawdzic wartości w nim przypisane
         {
             Console.WriteLine("Constructor2");
-            SetDateOfBirth(dateOfBirth);
+            // SetDateOfBirth(dateOfBirth);
         }
+        
         public void SetDateOfBirth(DateTime date) // można dzięki temu zmodyfikować dateOfBirth tylko dzięki tej metodzie
         {
             if (date > DateTime.Now)
@@ -62,9 +79,11 @@ namespace _30.Class_method
         {
             return dateOfBirth;
         }
+        */
+
         public void SayHi() // gdybyśmy mieli dużo do wpisania danych typu person to możemy użyć funkcji jak poniżej, żeby każdego "przywitać"
         {
-            Console.WriteLine($"Hi, I'm {this.FirstName}, {this.LastName}, {GetDateOfBirth()}"); // this.Zmienna to może być pomocne gdy mamy argument w metodzie tak samo nazwany jak pole w klasie
+            Console.WriteLine($"Hi, I'm {this.FirstName}, {this.LastName},"); // this.Zmienna to może być pomocne gdy mamy argument w metodzie tak samo nazwany jak pole w klasie
         }
     }
 }
