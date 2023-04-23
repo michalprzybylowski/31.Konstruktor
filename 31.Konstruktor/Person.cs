@@ -48,20 +48,21 @@ namespace _30.Class_method
             }
     
         }
-        
-        // public string ContactNumber { get; set; } // jest to równoważne z tym co jest u góry, ale nie ma tutaj żadnej logiki związanej z ustawianiem wartości
 
+        // public string ContactNumber { get; set; } // jest to równoważne z tym co jest u góry, ale nie ma tutaj żadnej logiki związanej z ustawianiem wartości
+        public static int Count = 0;
         public Person(string firstName, string lastName) // pusty konstruktor(incjacja wartości danego oobiektu) jest tworzony domyślnie, można tworzyć przypisane by sprawdzic wartości w nim przypisane
         {
             Console.WriteLine("Constructor1");
             FirstName = firstName;
             LastName = lastName;
+            Count++;
         }
-        /*
+        
         public Person(DateTime dateOfBirth, string firstName, string lastName) : this(firstName,lastName) // pusty konstruktor(incjacja wartości danego oobiektu) jest tworzony domyślnie, można tworzyć przypisane by sprawdzic wartości w nim przypisane
         {
             Console.WriteLine("Constructor2");
-            // SetDateOfBirth(dateOfBirth);
+            SetDateOfBirth(dateOfBirth);
         }
         
         public void SetDateOfBirth(DateTime date) // można dzięki temu zmodyfikować dateOfBirth tylko dzięki tej metodzie
@@ -79,7 +80,7 @@ namespace _30.Class_method
         {
             return dateOfBirth;
         }
-        */
+        
 
         public void SayHi() // gdybyśmy mieli dużo do wpisania danych typu person to możemy użyć funkcji jak poniżej, żeby każdego "przywitać"
         {
