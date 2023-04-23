@@ -15,6 +15,8 @@ namespace Program
             Console.WriteLine($"{bill.FirstName} {bill.GetDateOfBirth()}");
 
             bill.SayHi(); // wywolania funkcji SayHi
+
+            Person john = new Person(new DateTime(1987, 1, 2), "Billy", "Wicky");
         }
     }
 }
