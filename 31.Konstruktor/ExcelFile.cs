@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace _31.Konstruktor
 {
-    internal class ExcelFile : File // dziedziczenie
+    class ExcelFile : IFile
     {
-        public override void Compres()
+        public string FileName { get; set; }
+
+        public int Size { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public void Compress()
         {
             Console.WriteLine($"Compressing Excel File..");
         }
@@ -16,7 +22,6 @@ namespace _31.Konstruktor
 
         public void GenerateReport()
         {
-            string prop = ProtectedProp;
             Console.WriteLine($"{FileName} report..");
         }
     }

@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace _31.Konstruktor
 {
-    abstract class File
+    interface IFile
     {
-        public string FileName { get; set; }
+         string FileName { get; set; }
 
-        public int Size { get; set; }
+         int Size { get; set; }
 
-        public DateTime CreatedOn { get; set; }
+         DateTime CreatedOn { get; set; }
 
-        protected string ProtectedProp { get; set; }
-
-        private string PrivateProp { get; set; }
-
-        public abstract void Compres();
+         void Compress();
     }
 }

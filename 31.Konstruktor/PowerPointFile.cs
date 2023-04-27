@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace _31.Konstruktor
 {
-    internal class PowerPointFile : File // dziedziczenie
+    class PowerPointFile : IFile 
     {
-        public override void Compres()
+        public string FileName { get; set; }
+
+        public int Size { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public void Compress()
         {
             Console.WriteLine($"Compressing PowerPoint file..");
         }
